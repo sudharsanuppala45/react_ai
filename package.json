@@ -1,0 +1,15 @@
+{
+  "name": "assignment-8",
+  "version": "1.0.0",
+  "description": "MEAL MASTER is a personalized meal recommender system with a user-friendly interface and advanced algorithms. It optimizes the cooking experience, reduces food waste, and incorporates AI to determine whether recipes can be made based on available ingredients and user feedback.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}

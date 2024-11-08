@@ -1,0 +1,338 @@
+/* General page layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../../assets/images/home.jpg'); /* Set the background image */
+    background-size: cover; /* Make sure the image covers the entire screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Take up full height of the viewport */
+    margin: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #134B70; /* Blue background for header */
+    color: white; /* White text */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 10; /* Ensure it's above the content */
+}
+
+/* Main content area */
+main {
+    flex: 1; /* Allow the main content to expand */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Ensure it takes up full space for centering */
+}
+
+/* Footer styles */
+footer {
+    background-color: #808080; /* Gray background */
+    color: white; /* White text */
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+    position: relative; /* Ensure it's positioned normally in the flow */
+}
+
+/* Footer text styling */
+footer p {
+    margin: 0;
+}
+
+/* Additional styles */
+.search-form {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.input-field {
+    width: 400px;
+    height: 45px;
+    padding: 0 15px;
+    font-size: 1rem;
+    border-radius: 20px;
+    border: 2px solid #4CAF50;
+    margin-right: 10px;
+    outline: none;
+}
+
+.input-field:focus {
+    border-color: #2C6F2E;
+}
+
+.search-button {
+    height: 45px;
+    width: 120px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #2C6F2E;
+}
+
+.validation-message {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.validation-message.positive {
+    color: #155724;
+    background-color: #d4edda;
+    border: 2px solid #c3e6cb;
+}
+
+.validation-message.negative {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 2px solid #f5c6cb;
+}
+
+.meal-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 50px;
+}
+
+.meal-card {
+    width: 250px;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.meal-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+.meal-title {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 15px 0;
+    color: #333;
+}
+
+.meal-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.meal-info h3 {
+    margin: 5px;
+}
+
+.meal-cuisine {
+    color: #4CAF50;
+}
+
+.meal-veg-status {
+    font-size: 1.5rem;
+}
+
+.no-meals-message {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #888;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+}
+
+/* Chatbot styling */
+.chatbox {
+    margin-top: 40px;
+    margin-left: 550px;
+    width: 400px; /* Adjusted width */
+    height: 500px; /* Adjusted height */
+    border: 2px solid #5C6BC0; /* Light purple-blue border */
+    border-radius: 15px;
+    background-color: #E8EAF6; /* Soft light blue background */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Flexbox layout */
+    justify-content: space-between; /* Distribute space between header, body, and footer */
+}
+main{
+    display: flex;  
+    align-items: center;
+
+}
+
+/* Chatbox header */
+.chatbox-header {
+    background-color: #3F51B5; /* Dark blue header */
+    color: #FFFFFF;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 2px solid #C5CAE9; /* Light border color */
+}
+
+/* Chatbox body */
+.chatbox-body {
+    flex: 1; /* Make body take up remaining space */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start; /* Start from the top */
+    overflow-y: auto;
+    background-color: #FFFFFF; /* White background */
+}
+
+/* Bot message styling */
+.bot-message {
+    background-color: #BBDEFB; /* Light blue message bubble */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 80%;
+}
+
+/* Typing status styling */
+.typing {
+    font-style: italic;
+    color: #B0BEC5; /* Light gray color for typing status */
+}
+
+/* Chatbox footer */
+.chatbox-footer {
+    padding: 12px;
+    background-color: #C5CAE9; /* Light purple footer */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.8rem; /* Reduced font size */
+    text-align: center;
+}
+
+/* Emoji button styling */
+.emoji-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.emoji-button:hover {
+    background-color: #D1C4E9; /* Subtle hover effect for emoji button */
+    border-radius: 50%;
+}
+
+/* Matter below emojis with reduced font size */
+.chatbox-footer .matter {
+    font-size: 0.7rem; /* Reduced font size for the matter below emojis */
+    color: #757575; /* Slightly darker text color */
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* AI bot link button */
+.ai-bot-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ai-bot-button {
+    display: inline-block;
+    background-color: #5C6BC0; /* Soft purple button */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.ai-bot-button:hover {
+    background-color: #3F51B5; /* Darker blue on hover */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #808080;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: rem;
+    margin-top: 20px;
+    height: 50px;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.logout-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .logout-button:hover {
+    background-color: #e60000;
+  }
+
+  /* Style for the bottom-right GIF */
+/* Style for GIF in the bottom-right corner */
+.chatbot-gif {
+    position: fixed; /* Fixes the GIF to the screen */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    z-index: 1000; /* Ensures it appears above other content */
+}
