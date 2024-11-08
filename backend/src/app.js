@@ -15,7 +15,7 @@ const userAuth = require("../middlewares/userAuth");
 const cors = require("cors");
 const app = express();
 app.use(cors({
-  origin: ["http://localhost:3000"],
+  origin: ["mongodb+srv://sudharsanuppala:YQhW0wKjBDOneN0u@cluster0.qx0hv.mongodb.net/chatbot-db?retryWrites=true&w=majority&appName=Cluster0"],
   credentials:true,
 }));
 app.use(express.json());
